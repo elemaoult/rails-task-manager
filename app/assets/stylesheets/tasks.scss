@@ -1,3 +1,45 @@
 // Place all the styles related to the tasks controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.btn:hover {
+    background-color: white;
+    color: blue;
+}
+
+.listed_tasks {
+    text-decoration: none;
+    color: white;
+}
+
+.listed_tasks:hover {
+    color: yellow;
+}
+
+.fas {
+  color: black;
+}
+
+
+.fas:hover {
+  color: red;
+}

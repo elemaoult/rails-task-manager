@@ -1,6 +1,13 @@
+<div class = "container m-3 p-2">
 <h2><%= @task.title %></h2>
-<p class="badge bg-light text-dark p-3"><%= @task.details %></p>
+<p class="btn btn-light"><%= @task.details %></p>
 <p><input class="form-check-input" type="checkbox" value="" checked>
-<%= @task.completed %></p>
+<%= @task.completed %>Completed?</p>
 
-<%= link_to 'Go back to index', '/tasks' %>
+<%= link_to task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } do %><i class="fas fa-solid fa-trash"></i><% end %>
+
+<%= link_to 'Edit task', edit_task_path, class: "btn btn-success m-3" %>
+<%= link_to 'Go back to index', '/tasks', class: "btn btn-danger m-3" %>
+</div>
