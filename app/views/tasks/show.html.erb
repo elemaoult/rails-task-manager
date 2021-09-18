@@ -1,0 +1,6 @@
+<h2><%= @task.title %></h2>
+<p class="badge bg-light text-dark p-3"><%= @task.details %></p>
+<p><input class="form-check-input" type="checkbox" value="" checked>
+<%= @task.completed %></p>
+
+<%= link_to 'Go back to index', '/tasks' %>
